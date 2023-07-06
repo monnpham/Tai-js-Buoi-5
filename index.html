@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1 class="text_al_center mg_top_50">BÀI TẠP JS BUỔI 5</h1>
+    <div id="carouselExampleCaptions" class="carousel slide " data-ride="carousel" data-interval="false">
+        <div class="carousel-indicators">
+            <button data-target="#carouselExampleCaptions" data-slide-to="0" class="active btn_slide">Bài 1</button>
+            <button data-target="#carouselExampleCaptions" data-slide-to="1" class=" btn_slide">Bài 2</button>
+            <button data-target="#carouselExampleCaptions" data-slide-to="2" class=" btn_slide">Bài 3</button>
+            <button data-target="#carouselExampleCaptions" data-slide-to="3" class=" btn_slide">Bài 4</button>
+            <button class="carousel-control-prev" type="button" data-target="#carouselExampleCaptions"
+                data-slide="prev">
+
+                <i class="bi bi-arrow-left-short"></i>
+            </button>
+            <button class="carousel-control-next" type="button" data-target="#carouselExampleCaptions"
+                data-slide="next">
+                <i class="bi bi-arrow-right-short"></i>
+            </button>
+
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="carousel_content">
+                    <h1>🏫 Quản lý tuyển sinh</h1>
+                    <div class="content_input row gy-3 align-items-center px-2">
+                        <div class="col-12 col-lg-4">
+                            <input id="score1" class="inputt" type="number" placeholder="Điểm Chuẩn">
+                        </div>
+                        <div class="col-12 col-lg-4">
+                            <select name="" id="location">
+                                <option value="0">Chọn Khu Vực</option>
+                                <option value="2">A</option>
+                                <option value="1">B</option>
+                                <option value="0.5">C</option>
+                            </select>
+                        </div>
+                        <div class="col-12 col-lg-4">
+                            <select name="" id="user">
+                                <option value="0">Chọn Đối Tượng</option>
+                                <option value="2.5">1</option>
+                                <option value="1.5">2</option>
+                                <option value="1">3</option>
+                            </select>
+                        </div>
+                        <div class="col-12 col-lg-4">
+                            <input id="score2" class="inputt" type="number" placeholder="Điểm Môn Thứ 1">
+                        </div>
+                        <div class="col-12 col-lg-4">
+                            <input id="score3" class="inputt" type="number" placeholder="Điểm Môn Thứ 2">
+                        </div>
+                        <div class="col-12 col-lg-4">
+                            <input id="score4" class="inputt" type="number" placeholder="Điểm Môn Thứ 3">
+                        </div>
+                        <div class="col-12">
+                            <button onclick="result1()" class="btn--primary">Kết Quả</button>
+                        </div>
+                        <div class="col-12 result">
+                            👉
+                            <span id="result1"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel_content">
+                    <h1>🔋 Tính tiền điện</h1>
+                    <div class="content_input row gy-3 align-items-center px-2">
+                        <div class="col-12 col-lg-3"></div>
+                        <div class="col-12 col-lg-3">
+                            <input id="fullname" class="inputt" type="text" placeholder="Nhập Họ Tên">
+                        </div>
+                        <div class="col-12 col-lg-3">
+                            <input id="kw" class="inputt" type="number" placeholder="Nhập Số Kw">
+                        </div>
+                        <div class="col-12 col-lg-3"></div>
+                        <div class="col-12">
+                            <button onclick="result2()" class="btn--primary">Tính Tiền Điện</button>
+                        </div>
+                        <div class="col-12 result">
+                            👉
+                            <span id="elic-bill"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel_content">
+                    <h1>💰 Tính thuế thu nhập cá nhân</h1>
+                    <div class="content_input row gy-3 align-items-center px-2">
+                        <div class="col-12 col-lg-4">
+                            <input id="fullnames" class="inputt" type="text" placeholder="Nhập Họ Tên">
+                        </div>
+                        <div class="col-12 col-lg-4">
+                            <input id="inc-year" class="inputt" type="text" placeholder="Tổng Thu Nhập Năm">
+                        </div>
+                        <div class="col-12 col-lg-4">
+                            <input id="de-per" class="inputt" type="number" placeholder="Số Người Phụ Thuộc">
+                        </div>
+
+                        <div class="col-12">
+                            <button onclick="result3()" class="btn--primary">Tính Thuế</button>
+                        </div>
+                        <div class="col-12 result">
+                            👉
+                            <span id="per-in"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel_content">
+                    <h1>🕸️ Tính tiền cáp </h1>
+                    <div class="content_input row gy-3 align-items-center px-2">
+                        <div class="col-12 col-lg-4">
+                            <select name="" id="ct" onchange="displayConect()">
+                                <option value="0">Chọn Loại Khách Hàng</option>
+                                <option value="1">Nhà Dân</option>
+                                <option value="2">Doanh Nghiệp</option>
+                            </select>
+                        </div>
+                        <div class="col-12 col-lg-4">
+                            <input id="cc" class="inputt" type="text" placeholder="Mã Khách Hàng">
+                        </div>
+                        <div class="col-12 col-lg-4">
+                            <input id="hi-channel" class="inputt" type="number" placeholder="Số Kênh Cao Cấp">
+                        </div>
+                        <div id="control-conect" class="col-12 " style="display: none;">
+                            <input id="connect" class="inputt" type="number" placeholder="Số kết Nối">
+                        </div>
+
+                        <div class="col-12 ">
+                            <button onclick="result4()" class="btn--primary">Tính Tiền Cáp</button>
+                        </div>
+                        <div class="col-12 result">
+                            👉
+                            <span id="cab-money"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+    <script src="js.js"></script>
+</body>
+
+</html>
