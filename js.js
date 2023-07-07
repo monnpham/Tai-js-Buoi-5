@@ -7,18 +7,9 @@ function result1() {
         l = Number(document.getElementById("location").value),
         u = Number(document.getElementById("user").value),
         r;
-
     r = s2 + s3 + s4 + (l + u)
-    console.log("s1:", s1)
-    console.log("s2:", s2)
-    console.log("s3:", s3)
-    console.log("s4:", s4)
-    console.log("r:", r)
-
-
     if (s1 != 0 && s2 != 0 && s3 != 0 && s4 != 0) {
         r = s2 + s3 + s4 + (l + u)
-        console.log("r2     :", r)
         if (r >= s1) {
             document.getElementById("result1").innerHTML = "Bạn đã đậu. Tổng điểm: " + r
         } else
@@ -73,9 +64,6 @@ function result3() {
         ic = document.getElementById("inc-year").value - 4e6 - 16e5 * document.getElementById("de-per").value,
         n = checkTax(ic),
         pi;
-    console.log("🚀 ~ file: js.js:78 ~ result3 ~ n:", n)
-    console.log("🚀 ~ file: js.js:76 ~ result3 ~ ic:", ic)
-
     switch (n) {
         case 0:
             document.getElementById("per-in").innerHTML = "Số tiền thu nhập không hợp lệ"
@@ -151,7 +139,6 @@ function result4() {
         case 2:
             if (cn > 10) n = cn - 10
             cm = 15 + 75 + (hi * 50) + (n * 5)
-            console.log("🚀 ~ file: js.js:157 ~ result4 ~ cm:", cm)
 
             cm = new Intl.NumberFormat("en-US", {
                 style: "currency",
